@@ -17,16 +17,24 @@
             <td><%= link_to product.name, product %></td>
             <td><%= product.url %></td>
             <td><%= product.description %></td>
-            <td>
-              <%= link_to "[EDIT]", edit_product_path(product) %> 
-              <%= link_to "[ELIMINAR]", product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
-            </td>
+            <% if signed_in? %>
+              <td>
+                <%= link_to "[EDIT]", edit_product_path(product) %> 
+                <%= link_to "[ELIMINAR]", product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+              </td>
+            <%else%>
+              <td>
+                <p>Logueate para desbloquear las opciones</p>
+              </td>
+            <% end %>
           </tr>
         <% end %>
       </table>
-    <div>
-      <%= link_to "Publicar Producto", new_product_path, class: "btn btn-primary" %>
-    </div>
+    <% if signed_in? %>
+      <div>
+        <%= link_to "Publicar Producto", new_product_path, class: "btn btn-primary" %>
+      </div>
+    <%end%>
     </div>
   </div>
 </div>
