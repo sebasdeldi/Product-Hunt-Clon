@@ -5,7 +5,6 @@ class CreateProducts < ActiveRecord::Migration
 			t.string :url
 			t.text :description
 
-			t.timestamps null: false
 		end
 	end
 end
