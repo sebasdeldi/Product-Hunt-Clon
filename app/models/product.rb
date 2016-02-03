@@ -6,9 +6,11 @@
 #  name        :string
 #  url         :string
 #  description :text
+#  user_id     :integer
 #
 
 class Product < ActiveRecord::Base
+	belongs_to :user
 	validates :name, presence: true
 	validates :url, presence: true
 end

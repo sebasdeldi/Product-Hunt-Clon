@@ -6,6 +6,7 @@
 #  name        :string
 #  url         :string
 #  description :text
+#  user_id     :integer
 #
 
 module ProductsHelper
