@@ -1,0 +1,17 @@
+es:
+  errors:
+    messages:
+      blank: "no puede estar en blanco"
+      invalid: "es inválido"
+      taken: "está en uso"
+      too_short: "demasiado corta"
+      too_long: "demasiado larga"
+
+  activerecord:
+    attributes:
+      user:
+        name: "Nombre"
+        mail: "E-mail"
+        password: "Contraseña"
+      product:
+        name: "Nombre"
