@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id          :integer          not null, primary key
+#  name        :string
+#  url         :string
+#  description :text
+#
+
 class ProductsController < 	ApplicationController
 
 	before_action :private_access, except: [:index, :show]
